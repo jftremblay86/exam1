@@ -16,8 +16,13 @@ namespace intra_models
 
         public string Province { get; set; }
 
-        public string UPC { get; set; }
+        public string PostalCode { get; set; }
 
+        public string ContactInfo { get; set; }
+
+        public string PicturePath { get; set; }
+
+        public string Info { get; set; }
 
 
 
