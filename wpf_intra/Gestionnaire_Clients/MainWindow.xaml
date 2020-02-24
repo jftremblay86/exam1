@@ -37,7 +37,9 @@
                             <RowDefinition Height="18*"/>
                         </Grid.RowDefinitions>
                         <TextBlock Text="Liste des clients"/>
-                        <TextBlock Text=" Nouveau Client " HorizontalAlignment="center"/>
+                        <Button HorizontalAlignment="center" >
+                            Nouveau Client
+                        </Button> 
                         <ListView Grid.Row="1" ItemsSource="{Binding Customers}" SelectedItem="{Binding Selectcustomers}">
                             <ListView.ItemTemplate >
                                 <DataTemplate>
@@ -80,8 +82,8 @@
                             <Button Grid.Row="5" Grid.Column="1">
                                 <Label Content="Supprimer Client"></Label>
                             </Button>
-                            
-                            <Image Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
+
+                            <Image Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2" Height="150"
                            Source="{Binding Selectcustomers.PicturePath}" 
                            Margin="6"/>
 

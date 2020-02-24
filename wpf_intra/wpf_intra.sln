@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf_intra", "wpf_intra\wpf_intra.csproj", "{87F492CF-7180-4D5E-8466-243BC9DB1BCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "intra_models", "intra_models\intra_models.csproj", "{7186A6D8-3226-4BB4-8155-F935657FF665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "intra_models", "intra_models\intra_models.csproj", "{7186A6D8-3226-4BB4-8155-F935657FF665}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestionnaire_Clients", "Gestionnaire_Clients\Gestionnaire_Clients.csproj", "{E5C85525-88C7-49E0-912E-68847E4E5337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gestionnaire_Clients", "Gestionnaire_Clients\Gestionnaire_Clients.csproj", "{E5C85525-88C7-49E0-912E-68847E4E5337}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{87F492CF-7180-4D5E-8466-243BC9DB1BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87F492CF-7180-4D5E-8466-243BC9DB1BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87F492CF-7180-4D5E-8466-243BC9DB1BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87F492CF-7180-4D5E-8466-243BC9DB1BCE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7186A6D8-3226-4BB4-8155-F935657FF665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7186A6D8-3226-4BB4-8155-F935657FF665}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7186A6D8-3226-4BB4-8155-F935657FF665}.Release|Any CPU.ActiveCfg = Release|Any CPU
