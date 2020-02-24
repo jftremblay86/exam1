@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestionnaire_Clients"
         mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource self}}"
         Title="Gestion de Clients" Height="450" Width="800">
     <Grid>
         <DockPanel>
@@ -60,21 +61,21 @@
                                 <RowDefinition Height="5*"/>
                             </Grid.RowDefinitions>
                             <Label Content="Prémom :" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
-                            <TextBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Width="130" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <TextBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Width="130" Height="20" Text="{Binding SelectedProduct.LastName}"/>
                             <Label Content="Nom :" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
-                            <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Width="130" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Width="130" Height="20" Text="{Binding SelectedProduct.Name}"/>
                             <Label Content="Addresse :" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,262,0"/>
-                            <TextBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Width="200" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <TextBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Width="200" Height="20" Text="{Binding SelectedProduct.Address}"/>
                             <Label Content="Ville :" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-                            <TextBox Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Width="130" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <TextBox Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Width="130" Height="20" Text="{Binding SelectedProduct.City}"/>
                             <Label Content="Province :" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
-                            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Width="50" VerticalAlignment="Center" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Width="50" VerticalAlignment="Center" Height="20" Text="{Binding SelectedProduct.Province}"/>
 
                             <Label Content="Code Postal:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
-                            <TextBox Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Width="110" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <TextBox Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Width="110" Height="20" Text="{Binding SelectedProduct.PostalCode}"/>
                           
                             <Label Content="Contact :" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
-                            <TextBox Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" Width="200" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <TextBox Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" Width="200" Height="20" Text="{Binding SelectedProduct.ContactInfo}"/>
                             <Button Grid.Row="5" Grid.Column="1">
                                 <Label Content="Supprimer Client"></Label>
                             </Button>

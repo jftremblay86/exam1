@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="image\" />
+    <None Remove="image\user.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Include="image\user.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\intra_models\intra_models.csproj" />
+  </ItemGroup>
+  
 </Project>

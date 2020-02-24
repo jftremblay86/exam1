@@ -1,16 +1,19 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace intra_models
 {
     public class Customer : INotifyPropertyChanged
     {
+
         public event PropertyChangedEventHandler PropertyChanged;
         public string Name { get; set; }
 
         public string LastName { get; set; }
 
-        public string Addresse { get; set; }
+        public string Address { get; set; }
 
         public string City { get; set; }
 
@@ -24,7 +27,11 @@ namespace intra_models
 
         public string Info { get; set; }
 
-
+        private void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
     }
+
 }

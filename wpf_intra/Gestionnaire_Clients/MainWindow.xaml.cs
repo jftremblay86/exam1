@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,17 +15,64 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using intra_models;
 
 namespace Gestionnaire_Clients
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
+
+
+        private Customer selectcustomers;
+        private cutomerdata Customerdata;
+        private ObservableCollection<Customer> customers;
+
+
+        public Customer Selectcustomers
+        {
+            get => selectcustomers;
+            set
+            {
+                selectcustomers = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ObservableCollection<Customer> Customers
+        {
+            get => customers;
+            set
+            {
+                customers = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+
+
         public MainWindow()
         {
             InitializeComponent();
+
+            InitValues();
+        }
+
+        private void InitValues()
+        {
+            Customerdata = new cutomerdata();
+            Customers = new ObservableCollection<Customer>(Customerdata.GetAll());
+
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
