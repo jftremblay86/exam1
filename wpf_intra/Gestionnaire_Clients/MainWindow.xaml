@@ -7,6 +7,86 @@
         mc:Ignorable="d"
         Title="Gestion de Clients" Height="450" Width="800">
     <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Fichier">
 
+                </MenuItem>
+                <MenuItem Header="_Edition">
+
+                </MenuItem>
+                <MenuItem Header="_Affichage">
+
+                </MenuItem>
+            </Menu>
+            <StatusBar DockPanel.Dock="Bottom">
+                <TextBlock Text="Produit sélectionné : "/>
+                <TextBlock Text="{Binding SelectedProduct.ShortDescription}"/>
+            </StatusBar>
+            <DockPanel>
+                <Grid Margin="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" MinWidth="150"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="18*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Liste des clients"/>
+                        <TextBlock Text=" Nouveau Client " HorizontalAlignment="center"/>
+                        <ListView Grid.Row="1" ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct}">
+                            <ListView.ItemTemplate >
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Info}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition Height="5*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Prémom :" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Width="130" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <Label Content="Nom :" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Width="130" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <Label Content="Addresse :" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,262,0"/>
+                            <TextBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Width="200" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <Label Content="Ville :" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Width="130" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <Label Content="Province :" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Width="50" VerticalAlignment="Center" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+
+                            <Label Content="Code Postal:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Width="110" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                          
+                            <Label Content="Contact :" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" Width="200" Height="20" Text="{Binding SelectedProduct.UPC}"/>
+                            <Button Grid.Row="5" Grid.Column="1">
+                                <Label Content="Supprimer Client"></Label>
+                            </Button>
+                            
+                            <Image Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                           Source="{Binding SelectedProduct.PicturePath}" 
+                           Margin="6"/>
+
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </DockPanel>
+        </DockPanel>
     </Grid>
 </Window>
